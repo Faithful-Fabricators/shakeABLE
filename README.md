@@ -42,42 +42,14 @@ To keep production costs accessible, **ShakeABLE** relies on widely available ho
 
 ---
 
-## 🔌 Circuit Diagram & Hardware
+## 🔌 Circuit Diagram & Hardware Wiring
 
-### Power Architecture
-The high-torque MG995 servo draws heavy current spikes when reversing direction at 2.5 Hz. To prevent Arduino brownouts, power must be routed in **parallel** from a high-current battery pack. **Do not power the servo from the Arduino's 5V pin.**
+The high-torque MG995 servo draws heavy current spikes when reversing direction at 2.5 Hz. To prevent Arduino brownouts, power must be routed in **parallel** from the battery pack to keep the servo's electrical noise isolated from the microcontroller. 
 
-===================================================================
-POWER DISTRIBUTION (PARALLEL)
-===================================================================
-
-  [ Battery Pack (+) ] ───► [ Power Switch ] ───┬───► Servo RED Wire
-                                               │
-                                               └───► Arduino NANO "5V" Pin
-
-  [ Battery Pack (-) ] ─────────────────────────┬───► Servo BROWN Wire
-                                               │
-                                               ├───► Arduino NANO "GND" Pin
-                                               │
-                                               ├───► 3.5mm Jack SLEEVE / RING
-                                               │
-                                               └───► Potentiometer LEFT Pin
-
-
-===================================================================
-CONTROL & SIGNAL LINES (WITH IN-LINE SAFETY RESISTOR)
-===================================================================
-
-  [ Arduino NANO ]
-   ├─── Pin D9  ────────────────────────────────────► Servo YELLOW Wire
-   │
-   ├─── Pin D2  ───► [ 100Ω RESISTOR ] ─────────────► 3.5mm Jack TIP
-   │                  (Short-Circuit Fuse)
-   │
-   ├─── Pin A0  ◄───────────────────────────────────► Potentiometer CENTER Pin
-   │
-   └─── Pin 5V  ────────────────────────────────────► Potentiometer RIGHT Pin
-
+### Power Distribution (Parallel)
+[ Battery Pack (+) ] ───► [ Power Switch ] ───┬───► Servo RED Wire│└───► Arduino NANO "5V" Pin[ Battery Pack (-) ] ─────────────────────────┬───► Servo BROWN Wire│├───► Arduino NANO "GND" Pin│├───► 3.5mm Jack SLEEVE / RING│└───► Potentiometer LEFT Pin
+### Control & Signal Lines (With In-Line Safety Resistor)
+[ Arduino NANO ]├─── Pin D9  ────────────────────────────────────► Servo YELLOW Wire│├─── Pin D2  ───► [ 100Ω RESISTOR ] ─────────────► 3.5mm Jack TIP│                  (Short-Circuit Fuse)│├─── Pin A0  ◄───────────────────────────────────► Potentiometer CENTER Pin│└─── Pin 5V  ────────────────────────────────────► Potentiometer RIGHT Pin
 
 *Note: Tying the Ring and Sleeve together on the cheaper-to-buy stereo jack allows the use of standard mono adaptive switches. A **100Ω safety resistor** is added to the Tip line to eliminate the risk of a dead short if a cable is plugged in while powered on.*
 
