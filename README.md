@@ -24,7 +24,7 @@ To keep production costs accessible, **ShakeABLE** relies on widely available ho
 
 
 ## 🌟 Features
-* **Adaptive Switch Input:** Global standard 3.5mm jack interface (supports low-cost stereo jack rewiring).
+* **Adaptive Switch Input:** Global standard 3.5mm jack interface.
 * **Direct Cause-and-Effect Control:** Shakes continuously while the switch is held down.
 * **Safety Failsafe Timeout:** Automatically shuts down and centers after 5 seconds of continuous activation to protect the hardware from stuck switches.
 * **Teacher Speed Slider:**  Adjustable oscillation frequency from 1.5 Hz to 2.5 Hz.
