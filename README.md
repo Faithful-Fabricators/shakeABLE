@@ -1,6 +1,6 @@
 # ShakeABLE ♿️👋
 
-An open-source, low-cost assistive technology device that translates adaptive switch inputs into dynamic shaking and waving motions. Designed for wheelchair integration, **ShakeABLE** allows users to independently play noisemakers, wave pompoms, or flutter sensory scarves.
+An open-source, low-cost assistive technology device that translates adaptive switch inputs into dynamic shaking and waving motions. Designed for wheelchair integration via a smartphone holder such as https://makerworld.com/en/models/67146-flexible-sturdy-phone-arm-100-printed#profileId-71072, **ShakeABLE** allows users to independently play noisemakers, wave pompoms, or flutter sensory scarves.
 
 Built using an Arduino Nano, a high-torque MG995 servo, and 3D-printed parts, the device features a teacher-controlled speed slider and an intentional TPU "mechanical fuse" to improve safety.  The TPU lever arm will bend if obstructed or if too heavy of a load is placed on it.
 
